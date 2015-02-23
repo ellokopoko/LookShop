@@ -1,0 +1,12 @@
+- links = ['Privacy & Cookies', 'Terms & Conditions', 'Accessibility', 'Store Directory', 'About Us']
+
+.container.clearfix
+  .content.row
+  
+    %ol.breadcrumb
+      - for link in links
+        %li
+          %a{:href => "##{link}"}
+            = link
+    .look_all_rights_reserved
+      %img{:src => "images/all_rights_reserved.png", :alt => ""}

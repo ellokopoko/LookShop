@@ -1,0 +1,60 @@
+- menus = [
+  - {name: 'Customer Service', items: ['Contact FAQ', 'Terms of payment', 'Terms of sale', 'Delivery terms and conditions', 'Returns and Refunds']}, 
+  - {name: 'Information', items: ['Affiliate', 'Cookies', 'How to Shop', 'About Nelly', 'Investor relations']}, 
+  - {name: 'Campaigns', items: ['Evening dresses', 'Makeup', 'Fashion forward', 'Training clothes', 'Special Occasion Dresses']}, 
+  - {name: 'Stores', items: ['Paris', 'New York', 'London', 'Madrid', 'Tokio']}]
+
+- social_icon = ['01_socil_twiter', '02_social_pinterest', '03_social_facebook', '04_social_google_plus', '05_social_t', '06_social_vk' ]
+  
+
+.container.clearfix
+  .content.row
+  
+    .hidden-xs.hidden-sm
+      - for col in menus
+        .col.col-md-2
+          .row
+            %h4
+              = col.name
+            %ul.list-unstyled
+              - for item in col.items
+                %li
+                  %a{:href => "##{item}"}
+                    = item
+    
+      .col.col-md-2
+        .row
+          %h4
+            Social
+          .social_icon
+            - for img in social_icon
+              %img{:src => "images/social/#{img}.png", :alt => ""}
+    
+      .col.col-md-2
+        .row.look_secured
+          %img{:src => "images/secured.png", :alt => ""}
+    
+    .look_footer_mobile.visible-sm.visible-xs
+      .col.col-xs-6
+        .row
+          - for col in menus
+            %ul.list-unstyled
+              %h4
+                = col.name
+              - for item in col.items
+                %li
+                  %a{:href => "##{item}"}
+                    = item
+      
+      .col.col-xs-6
+        .col.col-xs-6
+          .row
+            %h4
+              Social
+            .social_icon
+              - for img in social_icon
+                %img{:src => "images/social/#{img}.png", :alt => ""}
+
+        .col.col-xs-6
+          .row.look_secured
+            %img{:src => "images/secured.png", :alt => ""}

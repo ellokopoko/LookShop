@@ -1,0 +1,49 @@
+- items_menu = ['new', 'designer', 'women', 'man', 'clearence']
+
+.container.clearfix
+  .content.row
+    %header
+      
+      .look_logo
+        %a{:href => "index.php"}
+          %img{:src => "images/logo.png", :alt => "LookShop_logo"}
+      
+      .look_cart.pull-right.btn-group.open
+        %a(class="dropdown-toggle" data-toggle="dropdown" id= "dropdownMenu1")
+          Your cart
+          %span.caret.pull-right
+        %ul(class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1")
+          %li
+            %a{:href => "#"}
+              %span.glyphicon.glyphicon-shopping-cart
+              %span.look_cart_items
+                0 ITEMS | $0
+      
+      .look_nav.pull-right.hidden-xs
+        %ul.nav.navbar-nav
+          - for item in items_menu
+            %li.dropdown
+              %a(class="dropdown-toggle" data-toggle="dropdown" href="#")
+                = item
+                %span.caret
+              %ul.dropdown-menu
+    
+      %nav(class="navbar navbar-default visible-xs look_mobile_nav" role="navigation")
+        .container-fluid
+          .navbar-header
+            %button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse")
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a(class="navbar-brand" href="#index.php") MENU
+          
+          .collapse.navbar-collapse#menu-collapse
+            %ul.nav.navbar-nav
+              - for item in items_menu
+                %li.dropdown
+                  %a(class="dropdown-toggle" data-toggle="dropdown" href="#")
+                    = item
+                    %span.caret
+                  %ul.dropdown-menu
+    <!--- Header ------------------------------->

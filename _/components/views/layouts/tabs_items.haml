@@ -1,0 +1,26 @@
+- categories = [
+  - {title: 'what’s hot?', id: 'whats_hot'}, 
+  - {title: 'designers', id: 'designers'}, 
+  - {title: 'featured', id: 'featured'}, 
+  - {title: 'latest', id: 'latest'}]
+
+.container.clearfix
+  .content.row
+  
+    .tabbable.tabs
+      %ul{class: "nav nav-tabs", id: "look_myTab"}
+        - for category in categories
+          %li{class: "#{if category.id == 'whats_hot' then 'active' else ''}"}
+            %a{href: "##{category.id}", "data-toggle": "tab"}
+              = category.title.toUpperCase()
+        %li.look_whirling_nav
+          %a{:href => "#look_item_next", id: "look_item_next"}
+            %span.glyphicon.glyphicon-chevron-right
+        %li.look_whirling_nav
+          %a{:href => "#look_item_prev", id: "look_item_prev"}
+            %span.glyphicon.glyphicon-chevron-left
+        
+      .tab-content
+        - for category in categories
+          %div{id: "#{category.id}", class: "tab-pane #{if category.id == 'whats_hot' then 'active' else ''}"}
+            <?php include "_/views/layouts/snippet_items_#{category.id}.php" ?>

@@ -1,0 +1,12 @@
+- brands = ['01_brands_addict', '02_brands_abandon_ship', '03_brands_adidas', '04_brands_boy_london', '05_brands_converse', '06_brands_calvin_klein', '07_brands_edwin', '08_brands_grenson']
+
+.container.clearfix
+  .content.row
+    
+    %h4
+      FAVOURITE BRANDS
+    
+    %div
+      - for brand in brands
+        %a{:href => "##{brand}", class: "#{if brand.slice(0, 2) > 6 then "hidden-xs" else " "} "}
+          %img{:src => "images/brands/#{brand}.png", :alt => ""}

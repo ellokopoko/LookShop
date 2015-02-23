@@ -1,0 +1,35 @@
+<!--- Slider ---------------------->
+%div(id="look_carousel" class="carousel slide" data-ride="carousel")
+  <!-- Indicators -->
+  %ol.carousel-indicators
+    %li(data-target="#look_carousel" data-slide-to="0" class="active")
+    %li(data-target="#look_carousel" data-slide-to="1")
+        
+  <!-- Wrapper for slides -->
+  .carousel-inner
+    .item.active
+      %img{:src => "images/slides/slide_01.png", :alt => ""}
+      .carousel-caption.container
+        .look_crazy_summer
+          %img{:src => "images/slides/crazy_summer.png", :alt => ""}
+          .look_button
+            %button(type="button" class="btn btn-salmon")
+              SHOP NOW
+    .item
+      %img{:src => "images/slides/slide_01.png", :alt => ""}
+        .carousel-caption.container
+          .look_crazy_summer
+            %img{:src => "images/slides/crazy_summer.png", :alt => ""}
+            .look_button
+              %button(type="button" class="btn btn-salmon")
+                SHOP NOW
+      
+  <!-- Controls -->
+  %a(class="left carousel-control" href="#look_carousel" data-slide="prev")
+    %div
+      %span.look_arrow_left
+  %a(class="right carousel-control" href="#look_carousel" data-slide="next")
+    %div
+      %span.look_arrow_right
+        
+<!--- Slider ---------------------->

@@ -1,0 +1,20 @@
+.container.clearfix
+  .content.row
+    %img{:src => "images/clearance_50_off.png", :alt => "", class: "look_clearance_img"}
+  
+    .look_showroom
+      - for number_img in [1..4]
+        %div{class: "look_cell_with_goods #{if number_img == 4 then "hidden-sm hidden-xs" else " "}"
+          %a{:href => "#", class: "look_goods_img"}
+            %img{:src => "images/items/item_0#{number_img}_1170.jpg", :alt => ""}
+            %div.look_goods_hover_info
+              %img{:src => "images/items/hover_item_1170.png", :alt => ""}
+        
+          %h4
+            ABRACADABRA
+          %h2
+            %span.glyphicon.glyphicon-usd
+            59.95
+          %button(type="button" class="btn btn-salmon")
+            ADD TO CART 
+            %span.glyphicon.glyphicon-plus

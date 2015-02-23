@@ -1,0 +1,543 @@
+@import "compass"
+@import "compass/css3/transition"
+//@import "compass/reset"
+
+$black:       #000
+$white:       #fff
+$grey:        #ededed
+$salmon:      #fd926d
+$dark_grey:   darken($grey, 63%)
+
+
+
+h1, h2, h3, h4, h5, h6
+    color: $dark_grey
+
+
+
+#look_sub_menu
+    background: $black
+    color: $white
+    
+    .content div
+        padding: 10px 15px
+        border-right: 1px solid $dark_grey
+        &:first-child
+            border: none
+            padding: 10px 15px 10px 0px
+        &:last-child
+            border-left: 1px solid $dark_grey
+    
+    .glyphicon-user
+        color: darken($grey, 33%)
+    
+    
+    
+#look_header
+    
+    header
+        margin: 20px 0
+    
+    .look_logo
+        display: inline
+    
+    .look_nav
+        margin: 8px 10px
+        a
+            color: $black
+        @media(max-width: 991px)
+            font-size: 12px
+            margin: 8px 4px
+    
+    .look_cart
+        width: 212px
+        height: 31px
+        border: 1px solid $grey
+        box-sizing: unset
+        
+        a
+            display: block
+            padding: 5px
+            cursor: pointer
+            color: darken($grey, 33%)
+            &:hover
+                text-decoration: none
+                color: $dark_grey
+                
+        ul
+            margin: 0
+            box-shadow: none
+            +border-radius(0)
+            width: 212px
+            left: -1px
+            padding: 0
+            background: lighten($grey, 4%)
+            color: darken($grey, 33%)
+            border: 1px solid $grey
+            box-sizing: unset
+            &:hover
+                background: $grey
+        
+        .pull-right
+            margin: 8px 6px
+    .open a
+        box-shadow: none
+    
+    .look_cart_items
+        margin-left: 96px
+    
+    .look_mobile_nav
+        background: $salmon
+        border: 1px solid darken($salmon, 4%)
+        
+        a
+            color: $white
+            
+        .icon-bar
+            background: $white
+            +border-radius(2px)
+            height: 4px
+        
+    .navbar-toggle, .look_mobile_nav a
+        border-color: none
+        &:focus, &:hover
+            background: darken($salmon, 4%)
+    
+    
+    
+#look_slider
+    background: #f6f3ec
+    
+    .item > img
+        display: block
+        margin: auto
+    
+    .look_crazy_summer
+        width: 490px
+        height: 285px
+        position: relative
+        @media(max-width: 991px)
+            width: 340px
+        
+        img
+            @media(max-width: 991px)
+                width: 340px
+            @media(max-width: 767px)
+                width: 240px
+    
+    .carousel-caption
+        left: 0
+        right: 0
+        top: 0
+    
+    .look_button
+        bottom: -50px
+        left: 20%
+        position: absolute
+        right: 20%
+        @media(max-width: 991px)
+            bottom: 40px
+        @media(max-width: 767px)
+            bottom: 100px
+    
+    
+    
+#look_find_us
+    background: $grey
+    color: darken($grey, 33%)
+    margin: 55px 0 30px
+    
+    .look_updated
+        width: 400px
+        float: left
+    
+    .look_email
+        display: inline-block
+        width: 200px
+        vertical-align: middle
+        margin: 10px 0
+    
+    .input-group-addon
+        background: $salmon
+        color: $white
+        border-bottom: 4px solid darken($salmon, 4%)
+        border-top: 1px solid darken($salmon, 4%)
+        border-right: 1px solid darken($salmon, 4%)
+        border-left: 1px solid darken($salmon, 4%)
+        +border-radius(0)
+    .form-control
+        +border-radius(0)
+        
+    .look_social
+        float: right
+        @media(max-width: 672px)
+            float: left
+    
+    .look_social_fu_facebook
+        background: url("../../images/social/fu_facebook.png") no-repeat
+        width: 55px
+        height: 55px
+        display: inline-block
+        vertical-align: middle
+        &:hover
+            background: url("../../images/social/fu_facebook.png") no-repeat lighten($grey, 4%)
+    
+    .look_social_fu_pinterest
+        background: url("../../images/social/fu_pinterest.png") no-repeat
+        width: 55px
+        height: 55px
+        display: inline-block
+        vertical-align: middle
+        &:hover
+            background: url("../../images/social/fu_pinterest.png") no-repeat lighten($grey, 4%)
+        
+    .look_social_fu_twiter
+        background: url("../../images/social/fu_twiter.png") no-repeat
+        width: 55px
+        height: 55px
+        display: inline-block
+        vertical-align: middle
+        &:hover
+            background: url("../../images/social/fu_twiter.png") no-repeat lighten($grey, 4%)
+    
+    
+    
+#look_banners
+    
+    img
+        float: left
+    
+    .look_banner_great, .look_banner_extended
+        display: inline-block
+        width: 585px
+        float: left
+        @media(max-width: 1199px)
+            width: 485px
+        @media(max-width: 979px)
+            width: 375px
+        @media(max-width: 767px)
+            width: 337px
+        
+        img
+            width: 584px
+            @media(max-width: 1199px)
+                width: 484px
+            @media(max-width: 979px)
+                width: 375px
+            @media(max-width: 767px)
+                width: 337px
+    
+    .look_banner_little
+        display: inline-block
+        width: 292px
+        float: left
+        @media(max-width: 1199px)
+            width: 242px
+        @media(max-width: 979px)
+            width: 187px
+        @media(max-width: 767px)
+            width: 168px
+        
+        img
+            width: 291px
+            @media(max-width: 1199px)
+                width: 242px
+            @media(max-width: 979px)
+                width: 187px
+            @media(max-width: 767px)
+                width: 168px
+    
+    .look_banner_extended
+        padding-bottom: 1px
+        
+        .look_banner_little:last-child
+            padding-left: 1px
+    
+    .look_banner_extended:last-child
+        padding-bottom: 0px
+
+
+
+#look_tabs_items
+    position: relative
+    margin-top: 50px
+    overflow: hidden
+        
+    .look_whirling
+        background: $salmon
+        left: 0
+        margin-left: -614px
+        margin-right: -9999px
+        position: relative
+        right: 0
+        
+        #look_item_next
+            display: block
+            width: 20px
+            height: 30px
+        
+        #look_item_prev
+            display: block
+            width: 20px
+            height: 30px
+    
+    .look_whirling_nav
+        float: right
+        
+    .look_showroom
+        padding: 30px 0
+        
+    .look_cell_with_goods
+        display: inline-block
+        margin: 0 15px 0
+        background: lighten($grey, 4%)
+        text-align: center
+        padding-bottom: 15px
+        
+        h2 .glyphicon
+            font-size: 24px
+    
+    .nav-tabs
+        border: none
+        
+        a
+            color: $dark_grey
+            
+        a:focus, li.active > a, a:hover
+            background: $salmon
+            border-top: 1px solid darken($salmon, 4%)
+            border-right: 1px solid darken($salmon, 4%)
+            border-left: 1px solid darken($salmon, 4%)
+            +border-radius(0)
+            color: $white
+    
+    
+    
+#look_clearance 
+    margin: 103px 0 50px
+    
+    .content
+        border-top: 1px solid darken($grey, 8.5%)
+    
+    .look_showroom
+        min-width: 750px
+    
+    .look_clearance_img
+        display: block
+        margin: -103px auto 0
+        position: relative
+    
+    
+    
+#look_brands
+    border-top: 1px solid darken($grey, 8.5%)
+    
+    .content > div
+        min-width: 610px
+    
+    h4
+        background: none repeat scroll 0 0 white
+        display: table
+        margin: -10px auto
+        padding: 0 10px
+        text-align: center
+    
+    a
+        margin-right: 53px
+        @media(max-width: 1199px)
+            margin-right: 25px
+            
+        @media(max-width: 991px)
+            margin-right: 13px
+            
+        @media(max-width: 767px)
+            margin-right: 31px
+            
+        &:hover, &:focus
+            text-decoration: none
+        &:last-child
+            margin-right: 0
+        
+        img
+            height: 121px
+            
+            @media(max-width: 991px)
+                height: 100px
+            @media(max-width: 767px)
+                height: 100px
+
+    
+    
+#look_about
+    border-top: 1px solid darken($grey, 8.5%)
+    color: darken($grey, 33%)
+    
+    article
+        display: block
+        margin: auto
+        text-align: center
+
+
+
+#look_payments
+    background: lighten($grey, 4%)
+    color: darken($grey, 33%)
+    
+    article
+        display: block
+        margin: auto
+        width: 554px
+    
+    img
+        margin-left: 2px
+        
+        
+        
+#look_footer
+    background: $grey
+    color: darken($grey, 33%)
+    
+    .social_icon
+        img
+            margin: 0 12px 12px 0
+    
+    .look_secured
+        img
+            float: right
+    
+    .look_footer_mobile
+        
+        ul
+            float: left
+            height: 160px
+            width: 187px
+            
+            @media(max-width: 767px)
+                width: 168px
+    
+    a
+        color: darken($grey, 33%)
+    
+    
+    
+#look_footer_links
+    background: $black
+    color: darken($grey, 33%)
+    
+    .content
+        position: relative
+        height: 74px
+    
+    .breadcrumb
+        background: $black
+        margin: 0
+        padding: 0
+        position: absolute
+        bottom: 30px
+        
+    .breadcrumb > li + li:before
+        color: darken($grey, 33%)
+        content: "| "
+        padding: 0 5px
+        
+    .look_all_rights_reserved
+        position: absolute
+        right: 0
+        
+    a
+        color: darken($grey, 33%)
+        
+        
+        
+.btn-salmon
+    color: $white
+    border-bottom: 4px solid darken($salmon, 4%)
+    border-top: 1px solid darken($salmon, 4%)
+    border-right: 1px solid darken($salmon, 4%)
+    border-left: 1px solid darken($salmon, 4%)
+    +border-radius(0)
+    background: $salmon
+    
+.look_cell_with_goods
+    display: inline-block
+    margin: 0 -4px 0 36px
+    background: lighten($grey, 4%)
+    text-align: center
+    padding-bottom: 15px
+    +transition-property(all)
+    +transition-duration(200ms)
+    +transition-timing-function(ease-in)
+    &:first-child
+        margin-left: 0px
+    &:hover 
+        box-shadow: 0 0 20px lighten($grey, 4%)
+        transform: scale(1.04, 1.04)
+    
+    @media(max-width: 1199px)
+        margin: 0 -4px 0 31px
+    @media(max-width: 967px)
+        margin: 0 -4px 0 46px
+    
+    .look_goods_img
+        position: relative
+        display: block
+    
+    .look_goods_hover_info
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        opacity: 0
+        +transition-property(opacity)
+        +transition-duration(200ms)
+        +transition-timing-function(ease-in)
+        &:hover
+            opacity: 1
+        
+    img
+        @media(max-width: 1199px)
+            width: 220px
+        
+    h2 .glyphicon
+        font-size: 24px
+
+
+        
+.carousel-control
+    z-index: 99
+    width: 8%
+
+    
+        
+.carousel-control.left 
+    
+    > div
+        position: absolute
+        height: 117px
+        left: 0
+        top: 50%
+    
+    .look_arrow_left
+        background: url('../../images/arrow_left.png') no-repeat
+        width: 30px
+        height: 117px
+        position: absolute
+        left: 0
+        top: -50%
+
+    
+.carousel-control.right
+    
+    > div
+        position: absolute
+        height: 117px
+        right: 0
+        top: 50%
+    
+    .look_arrow_right
+        background: url('../../images/arrow_right.png') no-repeat
+        width: 30px
+        height: 117px
+        position: absolute
+        right: 0
+        top: -50%

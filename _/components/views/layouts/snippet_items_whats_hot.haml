@@ -1,0 +1,27 @@
+- goods = [
+  - {name: 'MIMOSA LACE DRESS', url: '01', price: '76.95'},
+  - {name: 'FEEL TANK', url: '02', price: '59.95'},
+  - {name: 'HOT SHORTS', url: '03', price: '35.95'},
+  - {name: 'PETROL SWEATER', url: '04', price: '21.50'},
+  - {name: 'NADIA DRESS', url: '05', price: '64.95'},
+  - {name: 'SOFI BLOUSE', url: '06', price: '26.95'},
+  - {name: 'GOODING SHORTS', url: '07', price: '79.95'},
+  - {name: 'MIMOSA LACE DRESS', url: '08', price: '76'},]
+
+.look_whirling
+  .look_showroom
+    - for good in goods
+      %div{class: "look_cell_with_goods", "data-product-index": "#{good.url.slice(1)-1}"}
+        %a{:href => "##{goods.name}", class: "look_goods_img"}
+          %img{:src => "images/items/item_#{good.url}_1170.jpg", :alt => ""}
+          %div.look_goods_hover_info
+            %img{:src => "images/items/hover_item_1170.png", :alt => ""}
+        
+        %h4
+          = good.name
+        %h2
+          %span.glyphicon.glyphicon-usd
+          = good.price
+        %button(type="button" class="btn btn-salmon")
+          ADD TO CART 
+          %span.glyphicon.glyphicon-plus
